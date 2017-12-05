@@ -187,12 +187,12 @@ namespace Microsoft.Restier.Core.Query
             var task = method.Invoke(executor, parameters) as Task<QueryResult>;
             var result = await task;
 
-            var any = result.Results.Cast<object>().Any();
-            if (!any)
-            {
-                // Which means previous expression does not have result, and should throw ResourceNotFoundException.
-                throw new ResourceNotFoundException(Resources.ResourceNotFound);
-            }
+            //var any = result.Results.Cast<object>().Any();
+            //if (!any)
+            //{
+            //    // Which means previous expression does not have result, and should throw ResourceNotFoundException.
+            //    throw new ResourceNotFoundException(Resources.ResourceNotFound);
+            //}
         }
 
         private static MethodCallExpression CheckWhereCondition(MethodCallExpression methodCallExpression)
