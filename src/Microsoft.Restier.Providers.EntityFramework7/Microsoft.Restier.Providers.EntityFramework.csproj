@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\GlobalSuppressions.cs" Link="GlobalSuppressions.cs" />
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\Ensure.cs" Link="Shared\Ensure.cs" />
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\EnumerableExtensions.cs" Link="Shared\EnumerableExtensions.cs" />
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\ExpressionHelperMethods.cs" Link="Shared\ExpressionHelperMethods.cs" />
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\ExpressionHelpers.cs" Link="Shared\ExpressionHelpers.cs" />
+    <Compile Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\TypeExtensions.cs" Link="Shared\TypeExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\..\..\..\.NET Projects\ResTier\src\Shared\SharedResources\SharedResources.resx" Link="SharedResources.resx" />
+  </ItemGroup>
+
+  <!--<Import Project="..\Build.props" />-->
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Restier.Core\Microsoft.Restier.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
+</Project>
