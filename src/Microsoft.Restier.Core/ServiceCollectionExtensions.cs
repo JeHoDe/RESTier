@@ -29,7 +29,6 @@ namespace Microsoft.Restier.Core
     /// <summary>
     /// Contains extension methods of <see cref="IServiceCollection"/>.
     /// </summary>
-    [CLSCompliant(false)]
     public static class ServiceCollectionExtensions
     {
         /// <summary>

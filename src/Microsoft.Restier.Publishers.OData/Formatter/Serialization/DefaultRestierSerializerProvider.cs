@@ -3,9 +3,9 @@
 
 using System;
 using System.Net.Http;
-using System.Web.OData;
-using System.Web.OData.Formatter.Serialization;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNet.OData;
+using Microsoft.AspNet.OData.Formatter.Serialization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.OData.Edm;
 
 namespace Microsoft.Restier.Publishers.OData.Formatter
@@ -42,9 +42,7 @@ namespace Microsoft.Restier.Publishers.OData.Formatter
         /// <param name="type">The type of result to serialize.</param>
         /// <param name="request">The HTTP request.</param>
         /// <returns>The serializer instance.</returns>
-        public override ODataSerializer GetODataPayloadSerializer(
-            Type type,
-            HttpRequestMessage request)
+        public override ODataSerializer GetODataPayloadSerializer(Type type, HttpRequest request)
         {
             ODataSerializer serializer = null;
             if (type == typeof(ResourceSetResult))

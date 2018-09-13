@@ -14,6 +14,7 @@ using Microsoft.OData.Edm;
 using Microsoft.Restier.Core.Model;
 using Microsoft.Restier.Core.Query;
 using Microsoft.Restier.Core.Submit;
+using Microsoft.Restier.Core.Properties;
 
 namespace Microsoft.Restier.Core
 {

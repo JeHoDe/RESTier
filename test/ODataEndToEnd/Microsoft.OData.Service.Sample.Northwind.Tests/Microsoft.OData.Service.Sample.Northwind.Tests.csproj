@@ -112,10 +112,6 @@
     <Compile Include="SaveTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Microsoft.Restier.Providers.EntityFramework\Microsoft.Restier.Providers.EntityFramework.csproj">
-      <Project>{f7ec910e-17ce-4579-84c5-36d3777b3218}</Project>
-      <Name>Microsoft.Restier.Providers.EntityFramework</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\src\Microsoft.Restier.Publishers.OData\Microsoft.Restier.Publishers.OData.csproj">
       <Project>{186f667e-54e5-4b57-9998-21d74cb77c24}</Project>
       <Name>Microsoft.Restier.Publishers.OData</Name>

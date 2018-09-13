@@ -4,6 +4,7 @@
 using System;
 using System.Globalization;
 using Microsoft.OData.Edm;
+using Microsoft.Restier.Core.Properties;
 
 namespace Microsoft.Restier.Core.Model
 {

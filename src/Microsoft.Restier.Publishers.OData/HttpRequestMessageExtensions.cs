@@ -4,6 +4,7 @@
 using System;
 using System.ComponentModel;
 using System.Net.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Restier.Publishers.OData.Batch;
 
 namespace Microsoft.Restier.Publishers.OData
@@ -21,10 +22,10 @@ namespace Microsoft.Restier.Publishers.OData
         /// </summary>
         /// <param name="request">The HTTP request.</param>
         /// <param name="changeSetProperty">The change set to be set.</param>
-        public static void SetChangeSet(this HttpRequestMessage request, RestierChangeSetProperty changeSetProperty)
+        public static void SetChangeSet(this HttpContext context, RestierChangeSetProperty changeSetProperty)
         {
-            Ensure.NotNull(request, "request");
-            request.Properties.Add(ChangeSetKey, changeSetProperty);
+            Ensure.NotNull(context, "context");
+            context.Items.Add(ChangeSetKey, changeSetProperty);
         }
 
         /// <summary>
@@ -32,12 +33,12 @@ namespace Microsoft.Restier.Publishers.OData
         /// </summary>
         /// <param name="request">The HTTP request.</param>
         /// <returns>The <see cref="RestierChangeSetProperty"/>.</returns>
-        public static RestierChangeSetProperty GetChangeSet(this HttpRequestMessage request)
+        public static RestierChangeSetProperty GetChangeSet(this HttpContext context)
         {
-            Ensure.NotNull(request, "request");
+            Ensure.NotNull(context, "context");
 
             object value;
-            if (request.Properties.TryGetValue(ChangeSetKey, out value))
+            if (context.Items.TryGetValue(ChangeSetKey, out value))
             {
                 return value as RestierChangeSetProperty;
             }

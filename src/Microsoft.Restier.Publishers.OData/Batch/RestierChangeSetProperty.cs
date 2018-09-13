@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Restier.Core.Submit;
 
 namespace Microsoft.Restier.Publishers.OData.Batch
@@ -29,7 +30,7 @@ namespace Microsoft.Restier.Publishers.OData.Batch
         {
             this.changeSetRequestItem = changeSetRequestItem;
             this.changeSetCompletedTaskSource = new TaskCompletionSource<bool>();
-            this.subRequestCount = this.changeSetRequestItem.Requests.Count();
+            this.subRequestCount = this.changeSetRequestItem.Contexts.Count();
             this.Exceptions = new List<Exception>();
         }
 
@@ -45,13 +46,13 @@ namespace Microsoft.Restier.Publishers.OData.Batch
         /// </summary>
         /// <param name="request">The http request message.</param>
         /// <returns>The task object that represents this callback execution.</returns>
-        public Task OnChangeSetCompleted(HttpRequestMessage request)
+        public Task OnChangeSetCompleted(HttpContext context)
         {
             if (Interlocked.Decrement(ref this.subRequestCount) == 0)
             {
                 if (Exceptions.Count == 0)
                 {
-                    this.changeSetRequestItem.SubmitChangeSet(request, this.ChangeSet)
+                    this.changeSetRequestItem.SubmitChangeSet(context, this.ChangeSet)
                         .ContinueWith(t =>
                         {
                             if (t.Exception != null)

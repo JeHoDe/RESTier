@@ -71,7 +71,7 @@ namespace Microsoft.Restier.Publishers.OData.Operation
                         parameter.ParameterType,
                         parameterTypeRef,
                         model,
-                        context.Request,
+                        context.HttpContext.Request,
                         context.ServiceProvider);
                 }
                 else

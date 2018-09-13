@@ -5,10 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Net.Http;
-using System.Web.OData.Formatter;
-using System.Web.OData.Formatter.Deserialization;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OData;
+using Microsoft.AspNet.OData.Formatter;
+using Microsoft.AspNet.OData.Formatter.Deserialization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.OData.Edm;
 
 namespace Microsoft.Restier.Publishers.OData.Formatter
@@ -24,7 +23,7 @@ namespace Microsoft.Restier.Publishers.OData.Formatter
             Type expectedReturnType,
             IEdmTypeReference propertyType,
             IEdmModel model,
-            HttpRequestMessage request,
+            HttpRequest request,
             IServiceProvider serviceProvider)
         {
             var readContext = new ODataDeserializerContext

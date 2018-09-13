@@ -4,6 +4,7 @@
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using Microsoft.Restier.Core.Properties;
 
 namespace Microsoft.Restier.Core.Query
 {

@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Restier.Core.Submit;
+using Microsoft.Restier.Core.Properties;
 
 namespace Microsoft.Restier.Core
 {

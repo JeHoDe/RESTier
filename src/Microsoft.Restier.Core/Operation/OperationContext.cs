@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft Corporation.  All rights reserved.
 // Licensed under the MIT License.  See License.txt in the project root for license information.
 
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -135,6 +136,6 @@ namespace Microsoft.Restier.Core.Operation
         /// Gets or sets the http request for this operation call
         /// TODO consider moving to base class after more investigation
         /// </summary>
-        public HttpRequestMessage Request { get; set; }
+        public HttpContext HttpContext { get; set; }
     }
 }

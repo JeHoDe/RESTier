@@ -8,6 +8,7 @@ using System.Threading;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OData;
 using Microsoft.OData.Edm;
+using Microsoft.Restier.Core.Properties;
 using ServiceLifetime = Microsoft.OData.ServiceLifetime;
 
 namespace Microsoft.Restier.Core

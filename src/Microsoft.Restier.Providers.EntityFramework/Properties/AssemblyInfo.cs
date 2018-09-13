@@ -8,12 +8,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RESTier Entity Framework Provider")]
-[assembly: AssemblyDescription("A provider that connects the RESTier to an Entity Framework based data source proxy.")]
+[assembly: AssemblyTitle("RESTier Entity Framework 7 Module")]
+[assembly: AssemblyDescription("A module that connects the RESTier to an Entity Framework based data source proxy.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
 [assembly: AssemblyProduct("Microsoft.Restier.Providers.EntityFramework")]
-[assembly: AssemblyCopyright("Copyright © Microsoft Corporation 2016")]
+[assembly: AssemblyCopyright("Copyright © Microsoft Corporation 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -23,4 +23,4 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("457b881a-45f7-4a11-bcc9-3ba0019c89ba")]
+[assembly: Guid("5880279B-620A-4745-88D0-58685A9B93E4")]

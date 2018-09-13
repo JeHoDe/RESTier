@@ -11,11 +11,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.OData.Edm.Library;
+using Microsoft.OData.Edm;
 using Microsoft.Restier.Core;
 using Microsoft.Restier.Core.Query;
 using Microsoft.Restier.Core.Submit;
-using Microsoft.Restier.Providers.EntityFramework.Properties;
 
 namespace Microsoft.Restier.Providers.EntityFramework
 {
@@ -112,10 +111,12 @@ namespace Microsoft.Restier.Providers.EntityFramework
             DataModificationItem entry,
             CancellationToken cancellationToken)
         {
-            IQueryable query = context.ApiContext.GetQueryableSource(entry.ResourceSetName);
+            var apiContext = context.GetApiService<ApiBase>();
+
+            IQueryable query = apiContext.GetQueryableSource(entry.ResourceSetName);
             query = entry.ApplyTo(query);
 
-            QueryResult result = await context.ApiContext.QueryAsync(new QueryRequest(query), cancellationToken);
+            QueryResult result = await apiContext.QueryAsync(new QueryRequest(query), cancellationToken);
 
             object entity = result.Results.SingleOrDefault();
             if (entity == null)
