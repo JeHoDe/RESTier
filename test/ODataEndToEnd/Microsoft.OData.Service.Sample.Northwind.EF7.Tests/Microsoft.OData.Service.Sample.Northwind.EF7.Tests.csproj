@@ -191,7 +191,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Microsoft.Restier.Providers.EntityFramework7\Microsoft.Restier.Providers.EntityFramework.csproj">
+    <ProjectReference Include="..\..\..\src\Microsoft.Restier.Providers.EntityFramework\Microsoft.Restier.Providers.EntityFramework.csproj">
       <Project>{d54a765e-4604-4c73-868b-0e0459b3a6b6}</Project>
       <Name>Microsoft.Restier.Providers.EntityFramework</Name>
     </ProjectReference>

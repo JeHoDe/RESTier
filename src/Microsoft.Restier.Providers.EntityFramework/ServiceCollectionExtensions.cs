@@ -27,7 +27,7 @@ namespace Microsoft.Restier.Providers.EntityFramework
         {
             services.AddScoped<DbContext>(sp =>
             {
-                return Activator.CreateInstance<TDbContext>();
+                return ActivatorUtilities.CreateInstance<TDbContext>(sp);
             });
 
             return services

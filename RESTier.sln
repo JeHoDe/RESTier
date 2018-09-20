@@ -39,13 +39,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Service.Sam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OData.Service.Sample.Tests", "test\ODataEndToEnd\Microsoft.OData.Service.Sample.Tests\Microsoft.OData.Service.Sample.Tests.csproj", "{C5FDAD47-4449-42FC-904F-C7FEBD0F4DB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Providers.EntityFramework", "src\Microsoft.Restier.Providers.EntityFramework7\Microsoft.Restier.Providers.EntityFramework.csproj", "{D54A765E-4604-4C73-868B-0E0459B3A6B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Providers.EntityFramework", "src\Microsoft.Restier.Providers.EntityFramework\Microsoft.Restier.Providers.EntityFramework.csproj", "{D54A765E-4604-4C73-868B-0E0459B3A6B6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Restier.Publishers.OData", "src\Microsoft.Restier.Publishers.OData\Microsoft.Restier.Publishers.OData.csproj", "{186F667E-54E5-4B57-9998-21D74CB77C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Providers.EntityFramework.Tests", "test\Microsoft.Restier.Providers.EntityFramework.Tests\Microsoft.Restier.Providers.EntityFramework.Tests.csproj", "{04B29D57-8004-45FF-8C41-C49E0F20707C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Providers.EntityFramework7.Tests", "test\Microsoft.Restier.Providers.EntityFramework7.Tests\Microsoft.Restier.Providers.EntityFramework7.Tests.csproj", "{16AC1EEC-D79C-49C1-9B85-728CF0079BED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Providers.EntityFramework.Tests", "test\Microsoft.Restier.Providers.EntityFramework.Tests\Microsoft.Restier.Providers.EntityFramework.Tests.csproj", "{16AC1EEC-D79C-49C1-9B85-728CF0079BED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Restier.Publishers.OData.Test", "test\Microsoft.Restier.Publishers.OData.Test\Microsoft.Restier.Publishers.OData.Test.csproj", "{31FE1F5B-7CD8-48F1-9CE3-4E57A0066440}"
 EndProject
