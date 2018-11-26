@@ -74,7 +74,7 @@ namespace Microsoft.Restier.Publishers.OData.Routing
                 }
             }
 
-            conventions.Insert(index + 1, new RestierRoutingConvention(config.ServiceProvider));
+            conventions.Insert(index + 1, new RestierRoutingConvention());
             return conventions;
         }
 

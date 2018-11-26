@@ -666,7 +666,7 @@ namespace Microsoft.Restier.Publishers.OData
         {
             Type genericResultType = resultType.MakeGenericType(result.GetType());
 
-            return (IActionResult)Activator.CreateInstance(genericResultType, result, this);
+            return (IActionResult)Activator.CreateInstance(genericResultType, result);
         }
 
         private void CheckModelState()
