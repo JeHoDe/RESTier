@@ -499,7 +499,9 @@ namespace Microsoft.Restier.Publishers.OData
             //response = method.Invoke(null, new object[] { this.Request, HttpStatusCode.OK, entityResult })
             //    as HttpResponseMessage;
 
-            return response;
+            //return response;
+
+            return Ok(entityResult);
         }
 
         private IQueryable GetQuery(ODataPath path)
@@ -621,7 +623,7 @@ namespace Microsoft.Restier.Publishers.OData
 
             var headers = new RequestHeaders(this.Request.Headers);
 
-            var etagHeaderValue = headers.IfMatch.SingleOrDefault();
+            var etagHeaderValue = headers.IfMatch?.SingleOrDefault();
             if (etagHeaderValue != null)
             {
                 ETag etag = this.Request.GetETag(new EntityTagHeaderValue(etagHeaderValue.Tag.Value, etagHeaderValue.IsWeak));
@@ -631,7 +633,7 @@ namespace Microsoft.Restier.Publishers.OData
                 return originalValues;
             }
 
-            etagHeaderValue = headers.IfNoneMatch.SingleOrDefault();
+            etagHeaderValue = headers.IfNoneMatch?.SingleOrDefault();
             if (etagHeaderValue != null)
             {
                 ETag etag = this.Request.GetETag(new EntityTagHeaderValue(etagHeaderValue.Tag.Value, etagHeaderValue.IsWeak));
